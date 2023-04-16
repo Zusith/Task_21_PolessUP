@@ -12,11 +12,11 @@ int SquareTwoRectangles(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, in
     DecartToScreen(ref bx2, ref by2);
     Rectangle a = new Rectangle(ax1, ay2, Math.Abs(ax1 - ax2), Math.Abs(ay1 - ay2));
     Rectangle b = new Rectangle(bx1, by2, Math.Abs(bx1 - bx2), Math.Abs(by1 - by2));
-    Rectangle recintersection = Rectangle.Intersect(a, b);
-    if (recintersection.IsEmpty)
+    Rectangle rectanglesintersection = Rectangle.Intersect(a, b);
+    if (rectanglesintersection.IsEmpty)
         return a.Height * a.Width + b.Height * b.Width;
 
-    return a.Height * a.Width + b.Height * b.Width - recintersection.Height * recintersection.Width;
+    return a.Height * a.Width + b.Height * b.Width - rectanglesintersection.Height * rectanglesintersection.Width;
 }
 
 void DecartToScreen(ref int x, ref int y)
