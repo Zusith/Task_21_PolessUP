@@ -4,6 +4,7 @@ int ax1 = -3, ay1 = 0, ax2 = 3, ay2 = 4, bx1 = 0, by1 = -1, bx2 = 9, by2 = 2;
 Console.WriteLine($"Ввод: ax1 = {ax1}, ay1 = {ay1}, ax2 = {ax2}, ay2 = {ay2}, bx1 = {bx1}, by1 = {by1}, bx2 = {bx2}, by2 = {by2}");
 Console.WriteLine("Вывод: " + SquareTwoRectangles(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2));
 
+// Плохо работает с большими числами
 int SquareTwoRectangles(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2)
 {
     DecartToScreen(ref ax1, ref ay1);
